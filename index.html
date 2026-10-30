@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturador 4.0 · Carrito</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="barra">
+    <h1>Tienda Tech</h1>
+    <p class="carrito-icono">🛒 <span id="badge" class="badge">0</span></p>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Catálogo</h2>
+
+      <div class="filtros">
+        <input type="search" id="buscar" placeholder="Buscar producto...">
+        <select id="categoria">
+          <option value="todas">Todas las categorías</option>
+          <option value="Periféricos">Periféricos</option>
+          <option value="Accesorios">Accesorios</option>
+          <option value="Pantallas">Pantallas</option>
+        </select>
+      </div>
+
+      <p id="sinResultados" class="vacio" hidden>
+        No hay productos que coincidan con la búsqueda.
+      </p>
+
+      <div id="catalogo" class="catalogo"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Tu carrito</h2>
+
+      <p id="carritoVacio" class="vacio">
+        Tu carrito está vacío. Agrega productos del catálogo.
+      </p>
+
+      <ul id="listaCarrito" class="lista-carrito"></ul>
+
+      <label for="envio">Envío</label>
+      <select id="envio">
+        <option value="retiro">Retiro en el local</option>
+        <option value="cuenca">Envío dentro de Cuenca</option>
+        <option value="nacional">Envío nacional</option>
+      </select>
+
+      <div id="resumen" class="resumen"></div>
+
+      <div class="acciones">
+        <button type="button" id="btnConfirmar" class="principal" disabled>
+          Confirmar pedido
+        </button>
+        <button type="button" id="btnVaciar" class="secundario" disabled>
+          Vaciar carrito
+        </button>
+      </div>
+
+      <p id="mensaje" class="mensaje" hidden></p>
+    </section>
+  </main>
+</body>
+</html>
